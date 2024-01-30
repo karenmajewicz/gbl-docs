@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://geoblacklight.org/docs/glossary/</loc>
+         <lastmod>2024-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://geoblacklight.org/docs/hardware_recommendations/</loc>
          <lastmod>2024-01-30</lastmod>
          <changefreq>daily</changefreq>
@@ -82,6 +87,11 @@
     </url>
     <url>
          <loc>https://geoblacklight.org/docs/item_images/</loc>
+         <lastmod>2024-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://geoblacklight.org/docs/json-geojson/</loc>
          <lastmod>2024-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
