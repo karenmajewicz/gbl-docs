@@ -210,7 +210,7 @@
         <a href="../geoblacklight_quick_start/" class="md-tabs__link">
           
   
-  Tutorials and Getting Started
+  Tutorials
 
         </a>
       </li>
@@ -375,7 +375,7 @@
             
   
   <span class="md-ellipsis">
-    Tutorials and Getting Started
+    Tutorials
   </span>
   
 
@@ -385,7 +385,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Tutorials and Getting Started
+            Tutorials
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1130,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accessing_geopackages/" class="md-nav__link">
+      <a href="../geopackages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1336,10 +1336,10 @@
   <h1>Add Data Relations Widget</h1>
 
 <h2 id="using-the-data-relations-widget">Using the Data Relations Widget</h2>
-<div class="note">
-<strong>This documentation is for GeoBlacklight versions 1.3 to versions 3.7 only. Beginning with version 4.0, GeoBlacklight performs this function by default.</strong>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This documentation is for GeoBlacklight versions 1.3 to versions 3.7 only. Beginning with version 4.0, GeoBlacklight performs this function by default.</p>
 </div>
-
 <p>Beginning with v1.3.0, GeoBlacklight supports simple visualization of parent/children relations between records in a catalog. When records that were derived from a parent record point back to that parent, it enables a toolbar widget that displays the relation.</p>
 <p>To make use of this, we have introduced support for a "source" field in GeoBlacklight metadata records. The actual key of this field is arbitrary –– just make sure that <code>Settings.FIELDS.SOURCE</code> properly reflects what you want to use –– but the GeoBlacklight schema allocates the Dublin Core field <code>dc_source_sm</code> for this purpose.</p>
 <p>The responsibility of this field is to point to a parent document (a document from which the current one is derived). The value should be the <code>layer_slug_s</code> of that parent (or parents), which also resides in your catalog. No modifications need to be made to the parent record in order to point back towards the derived records.</p>
