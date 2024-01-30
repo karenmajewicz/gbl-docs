@@ -9,7 +9,8 @@ theme:
       features:
             - navigation.tabs
             - navigation.sections
-      logo: img/geoblacklight-logo-small@2x.png
+            # - toc.integrate
+      logo: img/gbl-favicon.png
       extra_css: docs/extra.css
       highlightjs: true
       titles_only: true
@@ -33,7 +34,7 @@ extra:
 nav:
 - 'Docs Home': 'index.md'
 
-- Tutorials and Getting Started:
+- Tutorials:
      - 'Quick Start': 'geoblacklight_quick_start.md'
      - 'Getting Started - Developers Guide': 'getting_started_developers.md'
       
@@ -64,7 +65,7 @@ nav:
       - 'Settings': 'settings.md'
       - 'Catalog Controller': 'catalog_controller.md'
       - 'Index Maps': 'index_maps.md'
-      - 'GeoPackages': 'accessing_geopackages.md' 
+      - 'GeoPackages': 'geopackages.md' 
       - 'Contributing': 'contributing.md'
             
 - Recommendations:

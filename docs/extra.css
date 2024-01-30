@@ -1,58 +1,87 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  line-height: 1.25;
-  text-rendering: optimizeLegibility; }
-
-h1 {
-  font-size: 2.25em; }
-
-h2 {
-  font-size: 2em; }
-
-h3 {
-  font-size: 1.75em; }
-
-h4 {
-  font-size: 1.5em; }
-
-h5 {
-  font-size: 1.25em; }
-
-h6 {
-  font-size: 1em; }
-
-p {
-  margin: 0 0 0.75em; }
-
 /* 
-a:active {
-background-color:#D3D3D3;
-}
+This is custom CSS for geoblacklight.org.  The default text in the Material Theme is a little small, so many of these values increase the size slightly.
+- created: @karenmajewicz, 2023-06-14
+- updated: 
  */
 
-.wy-side-nav-search, .wy-nav-side, .wy-menu wy-menu-vertical, .wy-menu-vertical header, .wy-menu-vertical p.caption {
-    background-color: #ffffff;
-    color:#000;
+
+/* TOP MENU */
+ .md-tabs__link  {
+      font-size: 1.7em; 
+  }
+  
+/* SIDE MENU  */
+.md-nav--primary {
+      border-right: .1em  solid #24574F;
+      }
+
+.md-nav__item--section > .md-nav__link[for] {
+    color: inherit;
 }
 
-.wy-menu-vertical a {
-color: #000;
+.md-nav__item{
+      font-size: 1em;
+      }
+
+/* FONT SIZES */
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+.md-typeset h1{
+      color: #000;
+      font-weight: 600;
+      font-size: 2.1em;
 }
 
-.wy-menu-vertical a:hover {
-    color:#fff
+.md-typeset h2{
+      color:  #818589;
+      font-size: 1.75em;
 }
 
-.wy-menu-vertical a:active {
-   background-color: #D3D3D3;
-   color: #000
+.md-typeset h3{
+      color: inherit;
+      font-size: 1.3em;
 }
 
-.wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
-    background-color: #D3D3D3;
+
+/* BLOG TITLES */
+a.toclink{
+      font-size: .85em;
+      font-weight: 500;
+   }
+
+/* CENTER IMAGES  */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
 }
+
+/* OTHER GRIDS */
+/* RESPONSIVE - 1 COLUMN ON SMALL SCREENS */
+@media screen and (max-width: 640px) {
+  #grid-col { grid-template-columns: 100%; }
+}
+
+/* GRID CONTAINER */
+#grid-line {
+  display: grid;
+  grid-template-columns: auto auto ;
+  grid-gap: 20px;
+}
+ 
+/* GRID CELL */
+div.cell {
+/*   border: .5px solid #e0e0e0; */
+  padding: 5px;
+}
+
+/* SPAN MULTIPLE COLUMNS */
+.spancol {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+
