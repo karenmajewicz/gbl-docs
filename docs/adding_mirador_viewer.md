@@ -1,10 +1,10 @@
-## Adding Mirador IIIF Manifest Viewer
+# Add Mirador IIIF Manifest Viewer
 
-### Mirador
+## What is Mirador?
 
-[Mirador](https://projectmirador.org/) is an open source IIIF image and IIIF manifest viewer. Core GeoBlacklight contributors have contributed significantly to Mirador.
+[Mirador](https://projectmirador.org/) is an open source IIIF image and IIIF manifest viewer. Core GeoBlacklight contributors have contributed significantly to Mirador. Learn more on the [Project Mirador website](https://projectmirador.org).
 
-### Install
+## Install
 
 Add the Mirador 3 javascript and stylesheet assets to your project. If you are using Yarn, you can just add mirador via:
 
@@ -37,7 +37,7 @@ Or you can edit your package.json file like so, and run:
 yarn install
 ```
 
-### Configure
+## Configure
 
 With Mirador installed, you need to add the javascript library to your application.
 
@@ -49,7 +49,7 @@ application.js
 
 ```
 
-### Add a GeoBlacklight Viewer
+## Add a GeoBlacklight Viewer
 
 Within app/assets/javascripts/geoblacklight/viewers add a new iiif_manifest.js viewer, and specify your Mirador [configuration values](https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js).
 
@@ -156,6 +156,6 @@ module Geoblacklight
 end
 ```
 
-### Enjoy!
+## Enjoy!
 
 Add a [IIIF Manifest-based fixture to your spec fixtures](https://raw.githubusercontent.com/geobtaa/geoportal/develop/test/fixtures/files/btaa_documents/b1g_iiif_manifest_book.json) and reload the application (rake geoblacklight:server).

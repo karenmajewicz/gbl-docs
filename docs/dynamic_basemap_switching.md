@@ -8,7 +8,7 @@ Need a dynamic basemap switcher? You can customize GeoBlacklight to add support 
 
 <img width="500" alt="basemap-switcher" src="https://user-images.githubusercontent.com/69827/189993636-e2bfb61a-0ddd-439e-b4a5-44088edb9079.gif"/>
 
-##### 1. Add JavaScript Cookie to your application
+## 1. Add JavaScript Cookie to your application
 
 Use yarn to install [js-cookie](https://github.com/js-cookie/js-cookie):
 
@@ -45,7 +45,7 @@ Add js-cookie to your geoblacklight.js file:
 
 ```
 
-##### 2. Add Basemap options
+## 2. Add Basemap options
 
 Configure the additional basemap options in your geoblacklight.js file:
 
@@ -87,7 +87,7 @@ GeoBlacklight.Basemaps.esri_world_imagery = L.tileLayer('https://server.arcgison
 
 ```
 
-##### 3. Modify GeoBlacklight's map.js file
+## 3. Modify GeoBlacklight's map.js file
 
 Copy and move GeoBlacklight's `map.js` file to your local application.
 
@@ -181,7 +181,7 @@ addBasemapSwitcher: function() {
 ...
 ```
 
-##### 4. Add Leaflet's CSS file to the asset pipeline
+## 4. Add Leaflet's CSS file to the asset pipeline
 
 Unfortunately, Rails' asset pipeline cannot find Leaflet's Layer Group icon/images without some additional help.
 

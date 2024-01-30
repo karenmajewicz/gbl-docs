@@ -1,14 +1,15 @@
 # Homepage Map Centroid Clusters
 
-<div class="note">
-  <strong>Please note: </strong> This kind of customization may potentially make your future GeoBlacklight upgrades more difficult. If you choose to implement this feature, you will need to be extra vigilant when GBL JavaScript files change in future releases.
-</div>
+!!! warning
+
+	This kind of customization may potentially make your future GeoBlacklight upgrades more difficult. If you choose to implement this feature, you will need to be extra vigilant when GBL JavaScript files change in future releases.
+
 
 Want your homepage map to display centroid clusters? You can customize GeoBlacklight to add support for that:
 
 <img alt="homepage-centroid-visualization" src="https://user-images.githubusercontent.com/69827/190460417-861da2f8-9580-4903-8215-4dc10d7166cf.png"/>
 
-##### 1. Add a rake task to generate a centroids.json file
+## 1. Add a rake task to generate a centroids.json file
 
 Create a new rake file here:
 `/lib/tasks/generate_centroids_json.rake`
@@ -51,7 +52,7 @@ end
 
 Run this rake task via this command: `bundle exec rake geoportal:generate_centroids_json`
 
-##### 2. Install JavaScript Dependencies
+## 2. Install JavaScript Dependencies
 
 * Oboe - Oboe.js reads json, giving you the objects as they are found without waiting for the stream to finish
 * PruneCluster - Fast and realtime marker clustering for Leaflet
@@ -69,7 +70,7 @@ Add the node_modules directory to your asset path:
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 ```
 
-##### 3. Add our JavaScript changes for the Homepage Map
+## 3. Add our JavaScript changes for the Homepage Map
 
 We need to override the GeoBlacklight `app/assets/javascripts/geoblacklight/modules/home.js` file to add our customization.
 
@@ -147,7 +148,7 @@ Blacklight.onLoad(function() {
 
 ```
 
-##### 4. Add our Stylesheet changes for the Homepage Map
+## 4. Add our Stylesheet changes for the Homepage Map
 
 All that is missing now are is the CSS changes to style our clusters. Update your `application.scss` file to include the missing stylesheet:
 

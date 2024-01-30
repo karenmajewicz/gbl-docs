@@ -1,12 +1,11 @@
 
 # Getting Started for Developers
+This guide covers: 
 
-After reading this guide, you will know:  
-<ul>
-    <li> How to install a local instance of GeoBlacklight for Development purposes.  
-    <li> How to make small changes to the application.  
-    <li> How to see how those changes look in a browser.  
-</ul>
+1. How to install a local instance of GeoBlacklight for Development purposes.  
+2. How to make small changes to the application.  
+3. How to see how those changes look in a browser.  
+
 
 ---------
 
@@ -34,12 +33,10 @@ $ bundle exec rake geoblacklight:server
 
 This command executes everything needed to run a local version of GeoBlacklight. In order to see the version you have running, open a web browser and go to [http://localhost:3000/](http://localhost:3000/). You should be able to navigate around the site. Remember that your Rails server is running locally, so to stop it, run ^C (ctrl + c).
 
-<div class="note" markdown="1">
-<h6>Troubleshooting</h6>
-If you run into issues running this rake task, try removing your `Gemfile.lock` file and removing the test app with `rm -R .internal_test_app`. Then run `bundle install` before running the above command again.
-</div>
+!!! tip "Troubleshooting"
 
-Refer to the How To Guides of this website for instructions on making look and feel changes. 
+    If you run into issues running this rake task, try removing your `Gemfile.lock` file and removing the test app with `rm -R .internal_test_app`. Then run `bundle install` before running the above command again.
+
 
 ### Running Solr and Rails server separately
 

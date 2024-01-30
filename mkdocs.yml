@@ -1,7 +1,11 @@
 site_name: GeoBlacklight Documentation
 site_url: https://geoblacklight.org/docs
 repo_url: https://github.com/geoblacklight/docs
+copyright: Copyright &copy; 2015 - 2024 GeoBlacklight Community
 
+watch:
+  - includes
+  
 theme:
       name: material
       palette:
@@ -9,8 +13,11 @@ theme:
       features:
             - navigation.tabs
             - navigation.sections
+            - content.tooltips
+            - toc.follow
             # - toc.integrate
       logo: img/gbl-favicon.png
+      favicon: img/gbl-favicon.png
       extra_css: docs/extra.css
       highlightjs: true
       titles_only: true
@@ -19,12 +26,26 @@ theme:
             gtag: G-RFL265H4YX
 
 markdown_extensions:
-  - admonition
-  - def_list
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - abbr
+    - admonition
+    - def_list
+    - attr_list
+    - md_in_html
+    - pymdownx.snippets:
+        auto_append:
+            - docs/glossary.md
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - toc:
+        toc_depth: 3
 
 extra_css:
   - extra.css
@@ -34,30 +55,32 @@ extra:
 nav:
 - 'Docs Home': 'index.md'
 
-- Tutorials:
-     - 'Quick Start': 'geoblacklight_quick_start.md'
-     - 'Getting Started - Developers Guide': 'getting_started_developers.md'
+- 'Tutorials': 'tutorials.md'
+
       
 - How To Guides:
-      - Upgrade:
-            - 'Upgrade to Version 4.0': 'upgrade_version_4_0.md'
-            - 'Upgrade to Version 2.0': 'upgrade_version_2_0.md'
-            
-      - Leaflet:
-            - 'Add Centroid Clusters': 'homepage_map_centroid_clusters.md'
-            - 'Add Leaflet Controls': 'adding_leaflet_controls.md'
-            - 'Configure Leaflet for Retina Displays': 'leaflet_retina_configuration.md'
-            - 'Switch Default Basemap': 'default_basemap.md'
-            - 'Dynamic Basemap Switching': 'dynamic_basemap_switching.md'
-            
-      - Images and Icons:
-            - 'Add Mirador IIIF Viewer': 'adding_mirador_viewer.md'
-            - 'Add Support for Item Images': 'item_images.md'
-            - 'Add SVG Icons': 'adding_svg_icons.md'
-            
-      - Metadata Display:
-            - 'Add Data Relations Widget': 'data_relations_widget.md'
-            - 'Render HTML in Metadata Fields': 'rendering_html_from_description.md'
+    - Install:
+        - 'Quick Start': 'geoblacklight_quick_start.md'
+        - 'Getting Started - Developers Guide': 'getting_started_developers.md'
+    - Upgrade:
+        - 'Upgrade to Version 4.0': 'upgrade_version_4_0.md'
+        - 'Upgrade to Version 2.0': 'upgrade_version_2_0.md'
+        
+    - Leaflet:
+        - 'Add Centroid Clusters': 'homepage_map_centroid_clusters.md'
+        - 'Add Leaflet Controls': 'adding_leaflet_controls.md'
+        - 'Configure Leaflet for Retina Displays': 'leaflet_retina_configuration.md'
+        - 'Switch Default Basemap': 'default_basemap.md'
+        - 'Dynamic Basemap Switching': 'dynamic_basemap_switching.md'
+        
+    - Images and Icons:
+        - 'Add Mirador IIIF Viewer': 'adding_mirador_viewer.md'
+        - 'Add Thumbnail Images': 'item_images.md'
+        - 'Add SVG Icons': 'adding_svg_icons.md'
+        
+    - Metadata Display:
+        - 'Add Data Relations Widget': 'data_relations_widget.md'
+        - 'Render HTML in Metadata Fields': 'rendering_html_from_description.md'
       
 - Reference:
       - 'Software Releases': 'releases.md'
@@ -65,11 +88,13 @@ nav:
       - 'Settings': 'settings.md'
       - 'Catalog Controller': 'catalog_controller.md'
       - 'Index Maps': 'index_maps.md'
-      - 'GeoPackages': 'geopackages.md' 
+      - 'GeoPackages': 'geopackages.md'
+      - 'JSONs and GeoJSONs': 'json-geojson.md'
       - 'Contributing': 'contributing.md'
             
-- Recommendations:
-      - 'Hardware Recommendations': 'hardware_recommendations.md'
-      - 'Implementation Recommendations': 'implementation_recommendations.md'
-      - 'Periodic Maintenance': 'periodic_maintenance.md'
+- Explanation:
+    - Running in Production:
+        - 'Hardware Recommendations': 'hardware_recommendations.md'
+        - 'Implementation Recommendations': 'implementation_recommendations.md'
+        - 'Periodic Maintenance': 'periodic_maintenance.md'
       

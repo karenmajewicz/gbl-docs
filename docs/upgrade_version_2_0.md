@@ -15,6 +15,7 @@
 
 #### Update User Model
   With the release of Blacklight 7, the `Blacklight::Utils` Module has been deprecated.  `User` Models must have the following removed:
+  
   ```ruby
   class User < ApplicationRecord
     ## Please remove or comment this code:
