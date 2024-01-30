@@ -302,6 +302,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1035,6 +1037,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Metadata
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1044,6 +1057,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-functionality-in-geoblacklight-4x-with-ogm-aardvark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata functionality in GeoBlacklight 4.x (with OGM Aardvark)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1349,7 +1390,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1360,6 +1403,23 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-functionality-in-geoblacklight-4x-with-ogm-aardvark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata functionality in GeoBlacklight 4.x (with OGM Aardvark)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1379,14 +1439,452 @@
 
 <h1 id="metadata">Metadata</h1>
 <p>GeoBlacklight uses a lightweight metadata schema designed for geospatial resource discovery. The schema enables keyword searches, faceted refinement, and spatial map searching.</p>
-<p>Metadata for GeoBlacklight is documented on the <a href="https://opengeometadata.org">OpenGeoMetadata website.</a></p>
-<hr />
-<p><strong>Metadata Schema for GeoBlacklight versions 4.x:</strong>
-Beginning with GeoBlacklight version 4, the metadata schema is <a href="https://opengeometadata.org/ogm-aardvark">OpenGeoMetadata, version <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr>.</a></p>
-<p><strong>Metadata Schema for GeoBlacklight versions 2.x - 3.x:</strong>
-The schema for GeoBlacklight up to versions 3.x is the <a href="https://opengeometadata.org/gbl-1.0">GeoBlacklight Metadata 1.0 schema.</a></p>
-<p><strong>Upgrading Metadata from <abbr title="Metadata schema for GeoBlacklight 1.0-3.x">GBL 1.0</abbr> to <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr>:</strong>
-<a href="https://opengeometadata.org/upgrade-metadata/">See the metadata upgrade guide on OpenGeoMetadata</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Metadata for GeoBlacklight is documented on the <a href="https://opengeometadata.org">OpenGeoMetadata website <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></svg></span>.</a>. Key pages include:</p>
+<ul>
+<li><a href="https://opengeometadata.org/ogm-aardvark">https://opengeometadata.org/ogm-aardvark</a> - <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr> Schema for GeoBlacklight versions 4.x</li>
+<li><a href="https://opengeometadata.org/gbl-1.0">https://opengeometadata.org/gbl-1.0</a> - <abbr title="Metadata schema for GeoBlacklight 1.0-3.x">GBL 1.0</abbr> Metadata Schema for GeoBlacklight versions 2.x - 3.x</li>
+<li><a href="https://opengeometadata.org/upgrade-metadata">https://opengeometadata.org/upgrade-metadata</a> - Upgrading Metadata from <abbr title="Metadata schema for GeoBlacklight 1.0-3.x">GBL 1.0</abbr> to <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr></li>
+</ul>
+</div>
+<h2 id="metadata-functionality-in-geoblacklight-4x-with-ogm-aardvark">Metadata functionality in GeoBlacklight 4.x (with <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr>)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">Field Name</th>
+<th style="text-align: left;">Required in GBL?</th>
+<th style="text-align: left;">Default text display on item show page</th>
+<th style="text-align: left;">Default facet</th>
+<th style="text-align: left;">Relation widget</th>
+<th style="text-align: left;">Part of Search results snippet view</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Access Rights</td>
+<td style="text-align: left;"><code>dct_accessRights_s</code></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">icon</td>
+<td style="text-align: left;">If set to "Restricted", a closed padlock icon appears next to the title. Downloads and web service previews will be hidden unless a user logs in using an authentication process. If set to "Public", an open padlock icon appears next to the title. Downloads and web services are accessible.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Provider</td>
+<td style="text-align: left;"><code>schema_provider_s</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">icon</td>
+<td style="text-align: left;">May control which records an authenticated user has access to.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resource Type</td>
+<td style="text-align: left;"><code>gbl_resourceType_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alternative Title</td>
+<td style="text-align: left;"><code>dct_alternative_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bounding Box</td>
+<td style="text-align: left;"><code>dcat_bbox</code></td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Rectangular extent required for overlap ratio boosting as part of the overall relevance ranking algorithm.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Centroid</td>
+<td style="text-align: left;"><code>dcat_centroid</code></td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Can be leveraged for homepage centroid map. Not used in default GeoBlacklight.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Title</td>
+<td style="text-align: left;"><code>dct_title_s</code></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Clickable text</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Creator</td>
+<td style="text-align: left;"><code>dct_creator_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">text on expanded view</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Description</td>
+<td style="text-align: left;"><code>dct_description_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">text on expanded view</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Index Year</td>
+<td style="text-align: left;"><code>gbl_indexYear_im</code></td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">text on expanded view</td>
+<td style="text-align: left;">Can be used with the Date Range plugin</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date Issued</td>
+<td style="text-align: left;"><code>dct_issued_s</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Date Range</td>
+<td style="text-align: left;"><code>gbl_dateRange_drsim</code></td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Display Note</td>
+<td style="text-align: left;"><code>gbl_displayNote_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Text displays within a callout box</td>
+</tr>
+<tr>
+<td style="text-align: left;">File Size</td>
+<td style="text-align: left;"><code>gbl_fileSize_s</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Format</td>
+<td style="text-align: left;"><code>dct_format_s</code></td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Required if a Download link is included. This value displays on the item show in the button under the download widget.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Geometry</td>
+<td style="text-align: left;"><code>locn_geometry</code></td>
+<td style="text-align: left;">conditional</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Required for the map search</td>
+</tr>
+<tr>
+<td style="text-align: left;">Georeferenced</td>
+<td style="text-align: left;"><code>gbl_georeferenced_b</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">ID</td>
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Functions as the slug (end part) of the item's URL</td>
+</tr>
+<tr>
+<td style="text-align: left;">Identifier</td>
+<td style="text-align: left;"><code>dct_identifier_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Is Part Of</td>
+<td style="text-align: left;"><code>dct_isPartOf_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Is Replaced By</td>
+<td style="text-align: left;"><code>dct_isReplacedBy_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Not used in GeoBlacklight</td>
+</tr>
+<tr>
+<td style="text-align: left;">Is Version Of</td>
+<td style="text-align: left;"><code>dct_isVersionOf_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Keyword</td>
+<td style="text-align: left;"><code>dcat_keyword_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Language</td>
+<td style="text-align: left;"><code>dct_language_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">3 digit code</td>
+</tr>
+<tr>
+<td style="text-align: left;">License</td>
+<td style="text-align: left;"><code>dct_license_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Member Of</td>
+<td style="text-align: left;"><code>pcdm_memberOf_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Metadata Version</td>
+<td style="text-align: left;"><code>gbl_mdVersion_s</code></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">May be required by some harvesters in OpenGeoMetadata</td>
+</tr>
+<tr>
+<td style="text-align: left;">Modified</td>
+<td style="text-align: left;"><code>gbl_mdModified_dt</code></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">Publisher</td>
+<td style="text-align: left;"><code>dct_publisher_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">References</td>
+<td style="text-align: left;"><code>dct_references_s</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">See https://opengeometadata.org/reference-uris/ for how different references function in GeoBlacklight</td>
+</tr>
+<tr>
+<td style="text-align: left;">Relation</td>
+<td style="text-align: left;"><code>dct_relation_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Replaces</td>
+<td style="text-align: left;"><code>dct_replaces_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resource Class</td>
+<td style="text-align: left;"><code>gbl_resourceClass_sm</code></td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">icon</td>
+<td style="text-align: left;">GBL will display an icon associated with the value. If multivalued, the first value will be used. Note: there is currently no icon for "Web services".</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rights</td>
+<td style="text-align: left;"><code>dct_rights_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rights Holder</td>
+<td style="text-align: left;"><code>dct_rightsHolder_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Source</td>
+<td style="text-align: left;"><code>dct_source_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spatial Coverage</td>
+<td style="text-align: left;"><code>dct_spatial_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Subject</td>
+<td style="text-align: left;"><code>dct_subject_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Suppressed</td>
+<td style="text-align: left;"><code>gbl_suppressed_b</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Hides items from search results. Items are only visible as  child or related records in the Relations widgets.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Temporal Coverage</td>
+<td style="text-align: left;"><code>dct_temporal_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">Theme</td>
+<td style="text-align: left;"><code>dcat_theme_sm</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">WxS Identifier</td>
+<td style="text-align: left;"><code>gbl_wxsIdentifier_s</code></td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">Required if a OCG web service is included</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1394,8 +1892,13 @@ The schema for GeoBlacklight up to versions 3.x is the <a href="https://opengeom
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
@@ -1441,6 +1944,10 @@ The schema for GeoBlacklight up to versions 3.x is the <a href="https://opengeom
     
     
       <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
       
     
   </body>
