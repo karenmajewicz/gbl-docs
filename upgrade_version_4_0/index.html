@@ -641,18 +641,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#settings-configsettingsyml" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Settings (config/settings.yml)
+      Settings
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#catalogcontroller-appcontrollerscatalog_controllerrb" class="md-nav__link">
+  <a href="#catalogcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      CatalogController (app/controllers/catalog_controller.rb)
+      CatalogController
     </span>
   </a>
   
@@ -674,27 +674,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#applicationcontroller-appcontrollersapplication_controllerrb" class="md-nav__link">
+  <a href="#applicationcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      ApplicationController (app/controllers/application_controller.rb)
+      ApplicationController
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stylesheets-appassetsstylesheetsapplicationscss" class="md-nav__link">
+  <a href="#stylesheets" class="md-nav__link">
     <span class="md-ellipsis">
-      Stylesheets (app/assets/stylesheets/application.scss)
+      Stylesheets
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#javascripts-appassetsjavascript" class="md-nav__link">
+  <a href="#javascripts" class="md-nav__link">
     <span class="md-ellipsis">
-      JavaScripts (app/assets/javascript/)
+      JavaScripts
     </span>
   </a>
   
@@ -1550,18 +1550,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#settings-configsettingsyml" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Settings (config/settings.yml)
+      Settings
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#catalogcontroller-appcontrollerscatalog_controllerrb" class="md-nav__link">
+  <a href="#catalogcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      CatalogController (app/controllers/catalog_controller.rb)
+      CatalogController
     </span>
   </a>
   
@@ -1583,27 +1583,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#applicationcontroller-appcontrollersapplication_controllerrb" class="md-nav__link">
+  <a href="#applicationcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      ApplicationController (app/controllers/application_controller.rb)
+      ApplicationController
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stylesheets-appassetsstylesheetsapplicationscss" class="md-nav__link">
+  <a href="#stylesheets" class="md-nav__link">
     <span class="md-ellipsis">
-      Stylesheets (app/assets/stylesheets/application.scss)
+      Stylesheets
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#javascripts-appassetsjavascript" class="md-nav__link">
+  <a href="#javascripts" class="md-nav__link">
     <span class="md-ellipsis">
-      JavaScripts (app/assets/javascript/)
+      JavaScripts
     </span>
   </a>
   
@@ -1673,7 +1673,8 @@
 <h2 id="4-application-configuration">4. Application Configuration</h2>
 <p>Review the configuration files for your GBL instance. You will need to update your <code>settings.yml</code> file and <code>catalog_controller.rb</code> file to use the new <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr> field mappings. See the default versions of these files in GeoBlacklight v4 and alter your files as necessary:</p>
 <p>You will also need to search your local application code for any old <code>Settings.FIELDS.(X)</code> mappings and update them as necessary.</p>
-<h3 id="settings-configsettingsyml">Settings (config/settings.yml)</h3>
+<h3 id="settings">Settings</h3>
+<p><code>config/settings.yml</code></p>
 <p>Many GBLv4 configuration changes take place in the <code>settings.yml</code> file.</p>
 <p>List of GBLv4 <a href="https://github.com/geoblacklight/geoblacklight/blob/main/lib/generators/geoblacklight/templates/settings.yml">settings.yml</a> changes:</p>
 <ul>
@@ -1729,7 +1730,8 @@
 </span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">  </span><span class="nt">:VERSION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;dct_isVersionOf_sm&#39;</span>
 </span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">  </span><span class="nt">:WXS_IDENTIFIER</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;gbl_wxsIdentifier_s&#39;</span>
 </span></code></pre></div>
-<h4 id="geoblacklight-params-settingsgbl_params">GeoBlacklight Params: Settings.GBL_PARAMS</h4>
+<h4 id="geoblacklight-params">GeoBlacklight Params</h4>
+<p><code>Settings.GBL_PARAMS</code></p>
 <p>Add the <strong>GBL_PARAMS</strong> array to <code>settings.yml</code> to whitelist the GBL application params so they are appended to controller methods and search builder queries.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Non-search-field GeoBlacklight application permitted params</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">GBL_PARAMS</span><span class="p">:</span>
@@ -1750,7 +1752,8 @@
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">:X</span>
 </span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">:Y</span>
 </span></code></pre></div>
-<h4 id="relationships-to-display-settingsrelationships_shown">Relationships to display: Settings.RELATIONSHIPS_SHOWN</h4>
+<h4 id="relationships-to-display">Relationships to display</h4>
+<p><code>Settings.RELATIONSHIPS_SHOWN</code></p>
 <p>The number of item/parent/collection relationships supported within GBLv4 has grown considerably. Add these default values to support the new relationships. You can also add additional relationship keys, fields, and query_types to support local customizations.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Relationships to display</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">RELATIONSHIPS_SHOWN</span><span class="p">:</span>
@@ -1817,7 +1820,8 @@
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>VERSION_OF:
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w"> </span> field: dct_isVersionOf_sm
 </span></code></pre></div>
-<h4 id="viewer-controls-settingsleafletviewerscontrols">Viewer Controls: Settings.LEAFLET.VIEWERS.*.CONTROLS</h4>
+<h4 id="viewer-controls">Viewer Controls</h4>
+<p><code>Settings.LEAFLET.VIEWERS.*.CONTROLS</code></p>
 <p>GBLv4 includes native support for the <code>Leaflet.fullscreen</code> plugin. Update your Leaflet configuration to include the <code>Fullscreen</code> viewer option.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Settings for leaflet</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">LEAFLET</span><span class="p">:</span>
@@ -1850,11 +1854,13 @@
 </span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Opacity&#39;</span>
 </span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Fullscreen&#39;</span>
 </span></code></pre></div>
-<h3 id="catalogcontroller-appcontrollerscatalog_controllerrb">CatalogController (app/controllers/catalog_controller.rb)</h3>
+<h3 id="catalogcontroller">CatalogController</h3>
+<p><code>app/controllers/catalog_controller.rb</code></p>
 <p>Besides the <code>settings.yml</code> configuration changes above, the <code>catalog_controller.rb</code> file holds a great deal of application configuration and it needs to be updated for the new <code>Settings.FIELD</code> values.</p>
 <p>It may be helpful to review the diff of changes to catalog_controller.rb from <a href="https://github.com/geoblacklight/geoblacklight/compare/v3.8.0...v4.0.0#diff-9e99abd5b848670740a1015f4d03aeaa747a747f0ae3cc3177d152975c017e81">v3.8.0 to v4.0.0</a></p>
 <p>Here is a list of GBL v4 <a href="https://github.com/geoblacklight/geoblacklight/blob/main/lib/generators/geoblacklight/templates/catalog_controller.rb">catalog_controller.rb</a> changes:</p>
-<h4 id="default-solr-params-configdefault_document_solr_params">Default <abbr title="The search index for GeoBlacklight">Solr</abbr> Params / config.default_document_solr_params</h4>
+<h4 id="default-solr-params">Default <abbr title="The search index for GeoBlacklight">Solr</abbr> Params</h4>
+<p><code>config.default_document_solr_params</code></p>
 <p>This uses the Settings.FIELDS.ID field now.</p>
 <div class="language-ruby highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">  </span><span class="c1">## Default parameters to send on single-document requests to Solr...</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">default_document_solr_params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1862,14 +1868,16 @@
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="ss">:q</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;{!raw f=</span><span class="si">#{</span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">ID</span><span class="si">}</span><span class="s2"> v=$id}&quot;</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span>
 </span></code></pre></div>
-<h4 id="view-defaults-configview-defaults">View Defaults / config.view defaults</h4>
+<h4 id="view-defaults">View Defaults</h4>
+<p><code>config.view</code> defaults</p>
 <p>Adds the "map" split view for catalog#index</p>
 <div class="language-ruby highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="c1"># GeoBlacklight Defaults</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="c1"># * Adds the &quot;map&quot; split view for catalog#index</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="ss">partials</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;index&#39;</span><span class="o">]</span><span class="p">)</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">delete_field</span><span class="p">(</span><span class="s1">&#39;list&#39;</span><span class="p">)</span>
 </span></code></pre></div>
-<h4 id="facet-fields-configadd_facet_fields">Facet Fields / config.add_facet_field(s)</h4>
+<h4 id="facet-fields">Facet Fields</h4>
+<p><code>config.add_facet_field(s)</code></p>
 <p>These are all now mapped to <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr> fields. Note: 'icon_facet' partials are now replaced by the <code>item_component: Geoblacklight::IconFacetItemComponent</code></p>
 <div class="language-ruby highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="c1"># FACETS</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
@@ -1913,17 +1921,20 @@
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_facet_field</span><span class="w"> </span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">SOURCE</span><span class="p">,</span><span class="w"> </span><span class="ss">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Source&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">show</span><span class="p">:</span><span class="w"> </span><span class="kp">false</span>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_facet_field</span><span class="w"> </span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">VERSION</span><span class="p">,</span><span class="w"> </span><span class="ss">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Is Version Of&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">show</span><span class="p">:</span><span class="w"> </span><span class="kp">false</span>
 </span></code></pre></div>
-<h4 id="index-fields-configadd_index_fields">Index Fields / config.add_index_field(s)</h4>
+<h4 id="index-fields">Index Fields</h4>
+<p><code>config.add_index_field(s)</code></p>
 <p>The "Index Fields" are the values that appear on search results lists. These have been mapped to <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr> fields.</p>
 <div class="language-ruby highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_index_field</span><span class="w"> </span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">INDEX_YEAR</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_index_field</span><span class="w"> </span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">CREATOR</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_index_field</span><span class="w"> </span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">DESCRIPTION</span><span class="p">,</span><span class="w"> </span><span class="ss">helper_method</span><span class="p">:</span><span class="w"> </span><span class="ss">:snippit</span>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_index_field</span><span class="w"> </span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">PUBLISHER</span>
 </span></code></pre></div>
-<h4 id="show-fields-configadd_show_fields">Show Fields / config.add_show_field(s)</h4>
+<h4 id="show-fields">Show Fields</h4>
+<p><code>config.add_show_field(s)</code></p>
 <p>The "Show Fields" are the values that appear on an item detail page. These have been mapped to <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr> fields, and many non-activated optional fields have been added to the default <code>catalog_controller.rb</code> file, too.</p>
 <p><a href="https://github.com/geoblacklight/geoblacklight/blob/main/lib/generators/geoblacklight/templates/catalog_controller.rb#L153-L218">View "Show Field" configuration online</a></p>
-<h4 id="sort-fields-configadd_sort_fields">Sort Fields / config.add_sort_field(s)</h4>
+<h4 id="sort-fields">Sort Fields</h4>
+<p><code>config.add_sort_field(s)</code></p>
 <p>The GBLv4 default sort fields options have been expanded. Here is the new default value for sorting:</p>
 <div class="language-ruby highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_sort_field</span><span class="w"> </span><span class="s1">&#39;score desc, dct_title_sort asc&#39;</span><span class="p">,</span><span class="w"> </span><span class="ss">:label</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;Relevance&#39;</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">add_sort_field</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">#{</span><span class="no">Settings</span><span class="o">.</span><span class="n">FIELDS</span><span class="o">.</span><span class="n">INDEX_YEAR</span><span class="si">}</span><span class="s2"> desc, dct_title_sort asc&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">:label</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;Year (Newest first)&#39;</span>
@@ -1948,11 +1959,13 @@
 </span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="k">end</span>
 </span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="k">end</span>
 </span></code></pre></div>
-<h4 id="locales-configlocalesgeoblacklightenyml">Locales (config/locales/geoblacklight.en.yml)</h4>
+<h4 id="locales">Locales</h4>
+<p><code>config/locales/geoblacklight.en.yml</code></p>
 <p>We have added additional relations entries for GBLv4 <a href="https://github.com/geoblacklight/geoblacklight/blob/main/config/locales/geoblacklight.en.yml">config/locales/geoblacklight.en.yml</a>.</p>
 <p>If you have local overrides or customizations to this file, please include the new relations entries locally.</p>
 <h2 id="5-application-changes">5. Application Changes</h2>
-<h3 id="applicationcontroller-appcontrollersapplication_controllerrb">ApplicationController (app/controllers/application_controller.rb)</h3>
+<h3 id="applicationcontroller">ApplicationController</h3>
+<p><code>app/controllers/application_controller.rb</code></p>
 <p>GBL installer now includes a <code>before_action</code> method to permit GBL application params. You'll need to add this code to your application_controller.rb file:</p>
 <div class="language-ruby highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">  </span><span class="n">before_action</span><span class="w"> </span><span class="ss">:allow_geoblacklight_params</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
@@ -1961,13 +1974,15 @@
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">blacklight_config</span><span class="o">.</span><span class="n">search_state_fields</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="no">Settings</span><span class="o">.</span><span class="n">GBL_PARAMS</span><span class="p">)</span>
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="k">end</span>
 </span></code></pre></div>
-<h3 id="stylesheets-appassetsstylesheetsapplicationscss">Stylesheets (app/assets/stylesheets/application.scss)</h3>
+<h3 id="stylesheets">Stylesheets</h3>
+<p><code>app/assets/stylesheets/application.scss</code></p>
 <p>GBL v4 no longer vendorizes the <code>leaflet-label</code> stylesheet. Check your local stylesheet files and remove any <code>*= require leaflet-label</code> or <code>@import 'leaflet-label';</code> lines.</p>
 <div class="language-diff highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gd">- /*</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="gd">- *= require leaflet-label</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="gd">- */</span>
 </span></code></pre></div>
-<h3 id="javascripts-appassetsjavascript">JavaScripts (app/assets/javascript/)</h3>
+<h3 id="javascripts">JavaScripts</h3>
+<p><code>app/assets/javascript/</code></p>
 <p>GBL v4 adds a new Leaflet control: <a href="https://github.com/Leaflet/Leaflet.fullscreen">Leaflet.fullzoom</a>. If you previously added this feature to your local GBL instance, you'll want to remove your custom implementation. This control can be added to your maps via the <code>settings.yml</code> file (see documentation above).</p>
 <h3 id="homepage">Homepage</h3>
 <p>The <code>_homepage_text.html.erb</code> view partial has been updated to use a view component for rendering the featured facets feature. You should update any local customizations to this file to use the components.</p>
