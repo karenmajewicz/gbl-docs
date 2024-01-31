@@ -39,7 +39,10 @@ Review the configuration files for your GBL instance. You will need to update yo
 
 You will also need to search your local application code for any old `Settings.FIELDS.(X)` mappings and update them as necessary.
 
-### Settings (config/settings.yml)
+### Settings
+
+`config/settings.yml`
+
 Many GBLv4 configuration changes take place in the `settings.yml` file.
 
 List of GBLv4 [settings.yml](https://github.com/geoblacklight/geoblacklight/blob/main/lib/generators/geoblacklight/templates/settings.yml) changes:
@@ -100,7 +103,9 @@ FIELDS:
   :WXS_IDENTIFIER: 'gbl_wxsIdentifier_s'
 ```
 
-#### GeoBlacklight Params: Settings.GBL_PARAMS
+#### GeoBlacklight Params
+
+`Settings.GBL_PARAMS`
 
 Add the **GBL_PARAMS** array to `settings.yml` to whitelist the GBL application params so they are appended to controller methods and search builder queries.
 
@@ -125,7 +130,9 @@ GBL_PARAMS:
   - :Y
 ```
 
-#### Relationships to display: Settings.RELATIONSHIPS_SHOWN
+#### Relationships to display
+
+`Settings.RELATIONSHIPS_SHOWN`
 
 The number of item/parent/collection relationships supported within GBLv4 has grown considerably. Add these default values to support the new relationships. You can also add additional relationship keys, fields, and query_types to support local customizations.
 
@@ -200,7 +207,10 @@ VERSION_OF:
   field: dct_isVersionOf_sm
 ```
 
-#### Viewer Controls: Settings.LEAFLET.VIEWERS.*.CONTROLS
+#### Viewer Controls
+
+`Settings.LEAFLET.VIEWERS.*.CONTROLS`
+
 GBLv4 includes native support for the `Leaflet.fullscreen` plugin. Update your Leaflet configuration to include the `Fullscreen` viewer option.
 
 ```yaml
@@ -236,7 +246,9 @@ LEAFLET:
         - 'Fullscreen'
 ```
 
-### CatalogController (app/controllers/catalog_controller.rb)
+### CatalogController
+
+`app/controllers/catalog_controller.rb`
 
 Besides the `settings.yml` configuration changes above, the `catalog_controller.rb` file holds a great deal of application configuration and it needs to be updated for the new `Settings.FIELD` values.
 
@@ -244,7 +256,9 @@ It may be helpful to review the diff of changes to catalog_controller.rb from [v
 
 Here is a list of GBL v4 [catalog_controller.rb](https://github.com/geoblacklight/geoblacklight/blob/main/lib/generators/geoblacklight/templates/catalog_controller.rb) changes:
 
-#### Default Solr Params / config.default_document_solr_params
+#### Default Solr Params
+
+`config.default_document_solr_params`
 
 This uses the Settings.FIELDS.ID field now.
 
@@ -256,7 +270,9 @@ This uses the Settings.FIELDS.ID field now.
   }
 ```
 
-#### View Defaults / config.view defaults
+#### View Defaults
+
+`config.view` defaults
 
 Adds the "map" split view for catalog#index
 
@@ -266,7 +282,9 @@ Adds the "map" split view for catalog#index
     config.view.split(partials: ['index'])
     config.view.delete_field('list')
 ```
-#### Facet Fields / config.add_facet_field(s)
+#### Facet Fields 
+
+`config.add_facet_field(s)`
 
 These are all now mapped to Aardvark fields. Note: 'icon_facet' partials are now replaced by the `item_component: Geoblacklight::IconFacetItemComponent`
 
@@ -322,7 +340,9 @@ To display item-to-item relationships, add this block below:
     config.add_facet_field Settings.FIELDS.VERSION, label: "Is Version Of", show: false
 ```
 
-#### Index Fields / config.add_index_field(s)
+#### Index Fields 
+
+`config.add_index_field(s)`
 
 The "Index Fields" are the values that appear on search results lists. These have been mapped to Aardvark fields.
 
@@ -333,13 +353,17 @@ The "Index Fields" are the values that appear on search results lists. These hav
     config.add_index_field Settings.FIELDS.PUBLISHER
 ```
 
-#### Show Fields / config.add_show_field(s)
+#### Show Fields 
+
+`config.add_show_field(s)`
 
 The "Show Fields" are the values that appear on an item detail page. These have been mapped to Aardvark fields, and many non-activated optional fields have been added to the default `catalog_controller.rb` file, too.
 
 [View "Show Field" configuration online](https://github.com/geoblacklight/geoblacklight/blob/main/lib/generators/geoblacklight/templates/catalog_controller.rb#L153-L218)
 
-#### Sort Fields / config.add_sort_field(s)
+#### Sort Fields 
+
+`config.add_sort_field(s)`
 
 The GBLv4 default sort fields options have been expanded. Here is the new default value for sorting:
 
@@ -375,7 +399,9 @@ Our web_services method is no longer a show tool partial. Migrating from GBLv3 t
   end
 ```
 
-#### Locales (config/locales/geoblacklight.en.yml)
+#### Locales 
+
+`config/locales/geoblacklight.en.yml`
 
 We have added additional relations entries for GBLv4 [config/locales/geoblacklight.en.yml](https://github.com/geoblacklight/geoblacklight/blob/main/config/locales/geoblacklight.en.yml).
 
@@ -383,7 +409,10 @@ If you have local overrides or customizations to this file, please include the n
 
 ## 5. Application Changes
 
-### ApplicationController (app/controllers/application_controller.rb)
+### ApplicationController
+
+`app/controllers/application_controller.rb`
+
 GBL installer now includes a `before_action` method to permit GBL application params. You'll need to add this code to your application_controller.rb file:
 
 ```ruby
@@ -395,7 +424,9 @@ GBL installer now includes a `before_action` method to permit GBL application pa
   end
 ```
 
-### Stylesheets (app/assets/stylesheets/application.scss)
+### Stylesheets 
+
+`app/assets/stylesheets/application.scss`
 
 GBL v4 no longer vendorizes the `leaflet-label` stylesheet. Check your local stylesheet files and remove any `*= require leaflet-label` or `@import 'leaflet-label';` lines.
 
@@ -405,7 +436,9 @@ GBL v4 no longer vendorizes the `leaflet-label` stylesheet. Check your local sty
 - */
 ```
 
-### JavaScripts (app/assets/javascript/)
+### JavaScripts 
+
+`app/assets/javascript/`
 
 GBL v4 adds a new Leaflet control: [Leaflet.fullzoom](https://github.com/Leaflet/Leaflet.fullscreen). If you previously added this feature to your local GBL instance, you'll want to remove your custom implementation. This control can be added to your maps via the `settings.yml` file (see documentation above).
 
