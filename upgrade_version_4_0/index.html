@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../releases/" class="md-tabs__link">
+        <a href="../glossary/" class="md-tabs__link">
           
   
   Reference
@@ -1160,6 +1160,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../releases/" class="md-nav__link">
         
   
@@ -1662,10 +1683,10 @@
 <li>solr/config/solrconfig.xml</li>
 </ul>
 <h2 id="3-data-migration">3. Data Migration</h2>
-<p>Migrate your <abbr title="The search index for GeoBlacklight">Solr</abbr> documents from the GBL v1.0 metadata standard to <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr>. GBL community documentation and migration tools are listed below:</p>
+<p>Migrate your <abbr title="The search index for GeoBlacklight">Solr</abbr> documents from the GBL v1.0 metadata standard to <abbr title="OpenGeoMetadata">OGM</abbr> <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr>. GBL community documentation and migration tools are listed below:</p>
 <ul>
-<li><a href="https://opengeometadata.org/upgrade-metadata/">OGM's Guide for Upgrading Metadata</a></li>
-<li><a href="https://opengeometadata.org/aardvark-gbl-1-crosswalk/">Full <abbr title="Metadata schema for GeoBlacklight 1.0-3.x">GBL 1.0</abbr> to <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr> Crosswalk</a></li>
+<li><a href="https://opengeometadata.org/upgrade-metadata/"><abbr title="OpenGeoMetadata">OGM</abbr>'s Guide for Upgrading Metadata</a></li>
+<li><a href="https://opengeometadata.org/aardvark-gbl-1-crosswalk/">Full <abbr title="Metadata schema for GeoBlacklight 1.0-3.x">GBL 1.0</abbr> to <abbr title="OpenGeoMetadata">OGM</abbr> <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr> Crosswalk</a></li>
 <li><a href="https://opengeometadata.org/scripts/">Tools and Techniques for Upgrading</a></li>
 <li><a href="https://kgjenkins.github.io/gbl2aardvark/">gbl2aardvark: convert GeoBlacklight 1.0 json files to <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr>
 </a></li>
@@ -1684,7 +1705,7 @@
 <li>Parent/Child SVG Icon titles</li>
 </ul>
 <h4 id="solr-field-mappings-settingsfields"><abbr title="The search index for GeoBlacklight">Solr</abbr> field mappings: Settings.FIELDS</h4>
-<p>With the adoption of the <abbr title="Metadata schema for GeoBlacklight 4.x and beyond">OGM Aardvark</abbr> metadata schema, we need to update all the <code>Settings.FIELDS</code> values for <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr>. Here are the default GBLv4 values. If you have additional local customizations here, you'll need carry those over, too.</p>
+<p>With the adoption of the <abbr title="OpenGeoMetadata">OGM</abbr> <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr> metadata schema, we need to update all the <code>Settings.FIELDS</code> values for <abbr title="Metadata schema for GeoBlacklight">Aardvark</abbr>. Here are the default GBLv4 values. If you have additional local customizations here, you'll need carry those over, too.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Solr field mappings</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">FIELDS</span><span class="p">:</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">:ACCESS_RIGHTS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;dct_accessRights_s&#39;</span>

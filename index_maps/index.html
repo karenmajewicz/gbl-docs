@@ -253,7 +253,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../releases/" class="md-tabs__link">
+        <a href="../glossary/" class="md-tabs__link">
           
   
   Reference
@@ -1005,6 +1005,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../releases/" class="md-nav__link">
         
   
@@ -1537,8 +1558,8 @@
 <p>For a conceptual introduction to index maps (i.e. what are index maps anyway?), see this <a href="https://kgjenkins.github.io/openindexmaps-workshop/index-maps">explanation</a>.</p>
 <p>Here are examples of "live" index maps hosted within the GeoBlacklight instances of <a href="https://cugir.library.cornell.edu/catalog/cugir-008187">Cornell</a> and <a href="https://earthworks.stanford.edu/catalog/stanford-qb865wf0229">Stanford</a>.  </p>
 <h3 id="making-index-maps">Making Index Maps</h3>
-<p>Before making index maps for use in GeoBlacklight, it is important to be familiar with OpenIndexMaps, a specific index map standard that is used by the GeoBlacklight community. For an introduction to this standard, see <a href="https://kgjenkins.github.io/openindexmaps-workshop/openindexmaps">here</a>. For more detailed information on making index maps according to the OpenIndexMaps standard, see <a href="https://openindexmaps.org/">here</a>.</p>
-<p>Index maps that are made according to the OpenIndexMaps standard are encoded in the <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> format. For more information about <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr>, see <a href="https://kgjenkins.github.io/openindexmaps-workshop/geojson">here</a>.  For a longer guide to <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> with additional useful information, please see the Data Curation Network (DCN) <a href="https://github.com/DataCurationNetwork/data-primers/blob/master/GeoJSON%20Data%20Curation%20Primer/GeoJSON-data-curation-primer.md">primer on <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr></a>.</p>
+<p>Before making index maps for use in GeoBlacklight, it is important to be familiar with <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr>, a specific index map standard that is used by the GeoBlacklight community. For an introduction to this standard, see <a href="https://kgjenkins.github.io/openindexmaps-workshop/openindexmaps">here</a>. For more detailed information on making index maps according to the <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr> standard, see <a href="https://openindexmaps.org/">here</a>.</p>
+<p>Index maps that are made according to the <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr> standard are encoded in the <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> format. For more information about <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr>, see <a href="https://kgjenkins.github.io/openindexmaps-workshop/geojson">here</a>.  For a longer guide to <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> with additional useful information, please see the Data Curation Network (DCN) <a href="https://github.com/DataCurationNetwork/data-primers/blob/master/GeoJSON%20Data%20Curation%20Primer/GeoJSON-data-curation-primer.md">primer on <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr></a>.</p>
 <p>When working with <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr>, it is recommended to use QGIS. For a quick overview of QGIS features that are relevant to working with <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr>, see <a href="https://kgjenkins.github.io/openindexmaps-workshop/qgis">here</a>.</p>
 <p>The following tutorials cover how to <a href="https://kgjenkins.github.io/openindexmaps-workshop/exercise1">make a polygon index map from an existing shapefile</a>, <a href="https://kgjenkins.github.io/openindexmaps-workshop/exercise2">how to make a point index map from a spreadsheet containing coordinates</a>, <a href="https://kgjenkins.github.io/openindexmaps-workshop/exercise3">how to create a grid index map from scratch</a>, and <a href="https://kgjenkins.github.io/openindexmaps-workshop/exercise4">how to create a polygon index map using virtual layer magic</a>.  </p>
 <h3 id="adding-customizing-and-displaying-index-maps">Adding, Customizing, and Displaying Index Maps</h3>
@@ -1546,7 +1567,7 @@
 and preview to GeoBlacklight. Index map preview can be added to a layer by adding an accessible url to a <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> file in a layer's <code>dct_references_s</code> section:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;dct_references_s&quot;: &quot;{\&quot;https://openindexmaps.org\&quot;: \&quot;https://gist.githubusercontent.com/mejackreed/4a44f1f7cc4fbb926068738e903a9e96/raw/fedfb0e599d647920f084627b7dca8f88a358757/stanford-fb897vt9938.geojson\&quot;}&quot;,
 </span></code></pre></div>
-<p>As noted above, index maps should be created using the <a href="https://openindexmaps.org/">OpenIndexMaps</a> specification. In GeoBlacklight, the <code>label</code> property will be used for the tooltip that appears when the user hovers over a feature on the index map.</p>
+<p>As noted above, index maps should be created using the <a href="https://openindexmaps.org/"><abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr></a> specification. In GeoBlacklight, the <code>label</code> property will be used for the tooltip that appears when the user hovers over a feature on the index map.</p>
 <p>The index map preview can be customized by overriding the Handlebars template <code>index_map_info.hbs</code> and/or overriding the <code>GeoBlacklight.Util.indexMapTemplate</code> method.</p>
 <p><a href="https://github.com/geoblacklight/geoblacklight/pull/759">#759</a> added selection styling for <abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> index map features and adjusted where style customizations are set. Styling for index map features can be customized in <code>settings.yml</code>. Any style that is set in the <code>DEFAULT</code> section will be applied to all feature states unless overwritten within each specific state. Style options follow the <a href="https://leafletjs.com/reference-1.4.0.html#path">Leaflet Path Options</a>, so any new style added should be from those available.</p>
 <h3 id="metadata-for-index-maps">Metadata for Index Maps</h3>
@@ -1562,12 +1583,12 @@ and preview to GeoBlacklight. Index map preview can be added to a layer by addin
 <p>The Source field (<code>dc_source_sm</code> or <code>dct_source_sm</code>) in the metadata records of the underlying data should should reference the index map, since the index map can be seen as a "source dataset" that offers a guide to the broader collection.</p>
 </li>
 </ul>
-<h3 id="committing-geoblacklight-index-maps-to-the-openindexmaps-github-repository">Committing GeoBlacklight Index Maps to the OpenIndexMaps Github repository</h3>
-<p>Once you have generated your index map and its associated metadata, the index map must go "live" on the web. There are different ways to pursue the task of making an index map go "live", but the recommended approach is to commit the map/<abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> to OpenIndexMaps' <a href="https://github.com/OpenIndexMaps">Github Repository</a>, which facilitates the discovery and sharing of index maps across institutions.</p>
-<p>Once your map has been committed to your OpenIndexMaps repository, you will want to take the url for the map's blob ("blob" stands for binary large object, which is an object that contains the contents of your file), and add this information back to your GeoBlacklight metadata record (in particular, you'll want to add this information to the <code>dct_references_s</code> section).</p>
+<h3 id="committing-geoblacklight-index-maps-to-the-openindexmaps-github-repository">Committing GeoBlacklight Index Maps to the <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr> Github repository</h3>
+<p>Once you have generated your index map and its associated metadata, the index map must go "live" on the web. There are different ways to pursue the task of making an index map go "live", but the recommended approach is to commit the map/<abbr title="Specific type of JSON for geographic features, such as OpenIndexMaps. GeoBlacklight metadata files are NOT GeoJSONs.">GeoJSON</abbr> to <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr>' <a href="https://github.com/OpenIndexMaps">Github Repository</a>, which facilitates the discovery and sharing of index maps across institutions.</p>
+<p>Once your map has been committed to your <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr> repository, you will want to take the url for the map's blob ("blob" stands for binary large object, which is an object that contains the contents of your file), and add this information back to your GeoBlacklight metadata record (in particular, you'll want to add this information to the <code>dct_references_s</code> section).</p>
 <p>To get the blob url, click the "Raw" link on your map's Github page, and copy the url of the page to which you are taken upon clicking this link.</p>
-<p>The <code>dct_references_s</code> section of the index map's GeoBlacklight metadata contains relevant external links, and are organized as a serialized <abbr title="JavaScript Object Notation - a flexible key:value pair file format used for GeoBlacklight metadata documents">JSON</abbr> array of key/value pairs (for more information on this section in the GeoBlacklight metadata schema, see <a href="https://opengeometadata.org/configure-external-links/">here</a>). In this case, the blob url which you copied (above) will be the value associated with the OpenIndexMaps url (which is the key).</p>
-<p>The following site, from the GeoBlacklight team at <a href="https://github.com/NYULibraries/sdr-documentation/blob/master/metadata-management.md#Adding-a-key-value-URL-in-the-references-field-to-one-or-more-records">NYU</a>, provides a script that adds references to existing GeoBlacklight metadata records. This script can be adapted to add the OpenIndexMaps/Blob-url key-value pair into the metadata's <code>dct_references_s</code> section.</p>
+<p>The <code>dct_references_s</code> section of the index map's GeoBlacklight metadata contains relevant external links, and are organized as a serialized <abbr title="JavaScript Object Notation - a flexible key:value pair file format used for GeoBlacklight metadata documents">JSON</abbr> array of key/value pairs (for more information on this section in the GeoBlacklight metadata schema, see <a href="https://opengeometadata.org/configure-external-links/">here</a>). In this case, the blob url which you copied (above) will be the value associated with the <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr> url (which is the key).</p>
+<p>The following site, from the GeoBlacklight team at <a href="https://github.com/NYULibraries/sdr-documentation/blob/master/metadata-management.md#Adding-a-key-value-URL-in-the-references-field-to-one-or-more-records">NYU</a>, provides a script that adds references to existing GeoBlacklight metadata records. This script can be adapted to add the <abbr title="GeoJSON-based file specification for standardizing spatial index maps">OpenIndexMaps</abbr>/Blob-url key-value pair into the metadata's <code>dct_references_s</code> section.</p>
 
 
 
