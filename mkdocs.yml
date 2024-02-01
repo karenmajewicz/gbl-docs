@@ -33,7 +33,7 @@ markdown_extensions:
     - md_in_html
     - pymdownx.snippets:
         auto_append:
-            - docs/glossary.md
+            - includes/tooltip-glossary.md
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -44,6 +44,11 @@ markdown_extensions:
     - pymdownx.inlinehilite
     - pymdownx.snippets
     - pymdownx.superfences
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
     - tables
     - toc:
         toc_depth: 3
@@ -93,6 +98,7 @@ nav:
         - 'Render HTML in Metadata Fields': 'rendering_html_from_description.md'
       
 - Reference:
+      - 'Glossary': 'glossary.md'
       - 'Software Releases': 'releases.md'
       - 'Metadata': 'metadata.md'
       - 'Settings': 'settings.md'

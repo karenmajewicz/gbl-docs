@@ -14,6 +14,9 @@ GeoBlacklight uses a lightweight metadata schema designed for geospatial resourc
     - [https://opengeometadata.org/gbl-1.0](https://opengeometadata.org/gbl-1.0) - GBL 1.0 Metadata Schema for GeoBlacklight versions 2.x - 3.x
     - [https://opengeometadata.org/upgrade-metadata](https://opengeometadata.org/upgrade-metadata) - Upgrading Metadata from GBL 1.0 to OGM Aardvark
 
-
 ## Metadata functionality in GeoBlacklight 4.x (with OGM Aardvark)
+
+!!! inline Tip "Hover over the column headers for sorting options."
+	
+
 {{ read_csv('docs/metadata-functions.csv') }}
