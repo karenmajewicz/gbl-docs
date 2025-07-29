@@ -1,0 +1,9 @@
+media: 
+  input: docs/img
+
+content:
+  - name: installation
+    label: installation
+    path: docs/installation
+    type: collection
+    fields: [ title, published, author ]
